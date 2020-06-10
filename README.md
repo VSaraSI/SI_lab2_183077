@@ -8,6 +8,7 @@
 Цикломатската комплексност на овој код е 8, преку броење на бројот на региони од Control Flow графот но може да се пресмета и со помош на предикатни јазли+1 или со помош на ребра и јазли.
 ### Тест случаи според критериумот Every statement ###
 @Test
+    
     public void TestEveryStatement(){
        RuntimeException ex;
        ex=assertThrows(RuntimeException.class, () -> SILab2.function(null,createList("sara11","nn89","av7")));
