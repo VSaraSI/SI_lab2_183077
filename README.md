@@ -9,23 +9,19 @@
 ### Тест случаи според критериумот Every statement ###
 @Test
     public void TestEveryStatement(){
-        RuntimeException ex;
-        ex=assertThrows(RuntimeException.class, () -> SILab2.function(null,createList("sara11","nn89","av7")));
-        assertTrue(ex.getMessage().contains("The user argument is not initialized!"));
-
+       RuntimeException ex;
+       ex=assertThrows(RuntimeException.class, () -> SILab2.function(null,createList("sara11","nn89","av7")));
+       assertTrue(ex.getMessage().contains("The user argument is not initialized!"));
        ex=assertThrows(RuntimeException.class, () ->SILab2.function(newUser(null,"sv.1","s@11.com"),createList("sara11","nn89","av7")));
-        assertTrue(ex.getMessage().contains("User already exists!"));
-
-        assertFalse(SILab2.function(new User("sara","sv.1",null),createList("sara11","nn89","av7")));
-
-        assertTrue(SILab2.function(new User("sara","sv.1","s@11.com"),createList("sara11","nn89","av7")));
-
-        assertFalse(SILab2.function(new User("sara","sv.1","s11com"),createList("sara11","nn89","av7")));
-
+       аssertTrue(ex.getMessage().contains("User already exists!"));
+       assertFalse(SILab2.function(new User("sara","sv.1",null),createList("sara11","nn89","av7")));
+       assertTrue(SILab2.function(new User("sara","sv.1","s@11.com"),createList("sara11","nn89","av7")));
+       assertFalse(SILab2.function(new User("sara","sv.1","s11com"),createList("sara11","nn89","av7")));
     }
 ### Тест случаи според критериумот Every path ###
 @Test
-    public void testEveryPath(){
+
+    public void testEveryPath(){        
         RuntimeException ex;
 
         //1,2,3,19
